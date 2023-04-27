@@ -53,6 +53,10 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.45")
     implementation("com.google.android.exoplayer:exoplayer:2.18.6")
     implementation("com.github.yogacp:android-viewbinding:1.0.4")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("androidx.paging:paging-runtime-ktx:3.1.1")
+
 }
 kapt {
     correctErrorTypes = true
