@@ -16,6 +16,6 @@ interface PixaInterface {
         @Query("q") query: String,
         @Query("page") page: Int,
         @Query("per_page") perPage: Int,
-    ): List<Hits>
+    ): PixaResponse
 
 }

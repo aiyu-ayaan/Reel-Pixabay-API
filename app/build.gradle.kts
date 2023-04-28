@@ -29,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         viewBinding = true
@@ -48,7 +48,6 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
-    implementation("com.google.android.exoplayer:exoplayer:2.18.6")
     implementation("com.google.dagger:hilt-android:2.45")
     kapt("com.google.dagger:hilt-android-compiler:2.45")
     implementation("com.google.android.exoplayer:exoplayer:2.18.6")
@@ -56,6 +55,10 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.paging:paging-runtime-ktx:3.1.1")
+    implementation ("androidx.media3:media3-exoplayer:1.0.1")
+    implementation ("androidx.media3:media3-ui:1.0.1")
+    implementation ("androidx.media3:media3-exoplayer-dash:1.0.1")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
 
 }
 kapt {

@@ -1,6 +1,13 @@
 package com.atech.reel.data
 
 import androidx.annotation.Keep
+import androidx.recyclerview.widget.DiffUtil
+
+data class PixaResponse(
+    val total: Int,
+    val totalHits: Int,
+    val hits: List<Hits>,
+)
 
 @Keep
 data class Hits(
@@ -33,3 +40,13 @@ data class VideoType(
     val height: Int,
     val size: Int,
 )
+
+class HitsDiffUtil : DiffUtil.ItemCallback<Hits>() {
+    override fun areItemsTheSame(oldItem: Hits, newItem: Hits): Boolean {
+        return oldItem.id == newItem.id
+    }
+
+    override fun areContentsTheSame(oldItem: Hits, newItem: Hits): Boolean {
+        return oldItem == newItem
+    }
+}
